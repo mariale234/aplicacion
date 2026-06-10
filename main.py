@@ -25,7 +25,7 @@ class MainWindow(QWidget):
         self.show()
 
     def set_window(self):
-        # Pestañas principales
+        
         self.tabs = QTabWidget()
         self.tab_diseno = QWidget()
         self.tab_control = QWidget()
@@ -35,7 +35,7 @@ class MainWindow(QWidget):
         self.tabs.addTab(self.tab_control, "CONTROL")
         self.tabs.addTab(self.tab_proyectos, "PROYECTOS")
         
-        # PESTAÑA DISEÑO 
+        
         layout_diseno = QHBoxLayout()
         
         # Bocetos
@@ -69,7 +69,7 @@ class MainWindow(QWidget):
 
         self.btn_guardar_color = QPushButton("Guardar Color")
         
-        # Lista de colores guardados
+        
         self.lista_colores = QListWidget()
         
         layout_paleta.addWidget(QLabel("Código HEX:"))
@@ -86,7 +86,7 @@ class MainWindow(QWidget):
         layout_diseno.addWidget(grupo_paleta)
         self.tab_diseno.setLayout(layout_diseno)
         
-        # PESTAÑA CONTROl
+        
         layout_control = QHBoxLayout()
         
         # Materiales
@@ -173,7 +173,7 @@ class MainWindow(QWidget):
         self.main_layout.addWidget(self.tabs)
         self.setLayout(self.main_layout)
 
-    def config_window(self):   #CONFIGURACION 
+    def config_window(self):   #CONFIGURACIO
         self.resize(ANCHO, ALTO)
         self.setWindowTitle(TITULO)
         font = QFont('Arial', 10)
